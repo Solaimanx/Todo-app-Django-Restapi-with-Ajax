@@ -11,13 +11,8 @@
 
     <style type="text/css">
       body {
-        background: rgb(54, 217, 182);
-        background: linear-gradient(
-          90deg,
-          rgba(54, 217, 182, 1) 0%,
-          rgba(32, 152, 126, 1) 43%,
-          rgba(0, 212, 255, 1) 100%
-        );
+        background-color: #85ffbd;
+        background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%);
       }
 
       #task-container {
@@ -129,10 +124,8 @@
             var list = data;
 
             for (var i in list) {
-             
-                try {
+              try {
                 document.getElementById(`data-row-${i}`).remove();
- 
               } catch (e) {}
 
               if (list[i].completed == true) {
@@ -158,7 +151,7 @@
                     `;
               wrapper.innerHTML += item;
             }
-            
+
             if (list_snapshot.length > list.length) {
               for (var i = list.length; i < list_snapshot.length; i++) {
                 document.getElementById(`data-row-${i}`).remove();
